@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "PruebaIndex";
+    Layout = "~/Views/Shared/WebMaster.cshtml";
+}
+@section stylespage {
+    <style>
+        table.dataTable thead .sorting {
+            background-image: url("@Url.Content("~/Content/vendor/datatables/images/sort_asc.png")")
+        }
+        table.dataTable thead .sorting_asc {
+            background-image: url("@Url.Content("~/Content/vendor/datatables/images/sort_asc.png")")
+        }
+
+        table.dataTable thead .sorting_desc {
+            background-image: url("@Url.Content("~/Content/vendor/datatables/images/sort_desc.png")")
+        }
+
+        table.dataTable thead .sorting_asc_disabled {
+            background-image: url("@Url.Content("~/Content/vendor/datatables/images/sort_asc_disabled.png")")
+        }
+
+        table.dataTable thead .sorting_desc_disabled {
+            background-image: url("@Url.Content("~/Content/vendor/datatables/images/sort_desc_disabled.png")")
+        }
+        .search-area-owner {
+            width: 500px;
+        }
+    </style>
+    @Styles.Render("~/Content/admin/vendor/datatables")
+    @Styles.Render("~/Content/admin/vendor/toastr")
+}
+<div class="page-titles">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Modulo</a></li>
+        <li class="breadcrumb-item active"><a href="javascript:void(0)">Submodulo</a></li>
+    </ol>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Titulo Submodulo</h4>
+            </div>
+            <div class="card-body">
+                <div class="col-8 mb-3">
+                    <div class="input-group search-area d-xl-inline-flex d-none" style="width: 500px;">
+                        <input type="text" class="form-control" placeholder="Texto prueba.">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="tbl_prueba" class="display min-w850">
+                        <thead>
+                            <tr>
+                                <th>Dato 1</th>
+                                <th>Dato 2</th>
+                                <th>Dato 3</th>
+                                <th>Dato 4</th>
+                                <th>Dato 5</th>
+                                <th>Dato 6</th>
+                                <th>Dato 7</th>
+                                <th>Dato 8</th>
+                                <th>Dato 9</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Dato 1</th>
+                                <th>Dato 2</th>
+                                <th>Dato 3</th>
+                                <th>Dato 4</th>
+                                <th>Dato 5</th>
+                                <th>Dato 6</th>
+                                <th>Dato 7</th>
+                                <th>Dato 8</th>
+                                <th>Dato 9</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scriptspage1 {
+
+
+}
+@section scriptspage2 {
+    @Scripts.Render("~//bundles/admin/vendor/datatables")
+    @Scripts.Render("~/bundles/admin/vendor/toastr")
+    @Scripts.Render("~/bundles/js/modulo/prueba/prueba")
+}

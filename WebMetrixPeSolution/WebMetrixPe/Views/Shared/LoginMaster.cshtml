@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Decateca - Admin</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="@Url.Content("~/images/favicon.webp")">
+
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Styles.Render("~/Content/login/css")
+    <style>
+        .add-menu-sidebar:before {
+            background: url("@Url.Content("~/images/dots2.webp")");
+        }
+        .add-menu-sidebar:after {
+            position: absolute;
+            height: 28px;
+            width: 30px;
+            background: url("@Url.Content("~/images/dots.webp")");
+            background-repeat: no-repeat;
+            content: "";
+            top: 10px;
+            left: 0;
+        }
+        .heart {
+            display: inline-block;
+            @*background: url("@Url.Content("~/images/like.webp")");*@
+        }
+    </style>
+    @*<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">*@
+    <script>
+        var rutaPrincipal = "@Url.Content("~")";
+    </script>
+    @Scripts.Render("~/bundles/login/js")
+    @RenderSection("scriptlogin1", required: false)
+</body>
+
+</html>
